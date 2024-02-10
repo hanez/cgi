@@ -8,6 +8,7 @@ use POSIX qw(strftime);
 
 my $date = strftime "%m/%d/%Y", localtime;
 
+print("Content-type: text/plain\n\n");
 print "Hello from Perl!\n\n";
 print $date;
 print "\n\n";

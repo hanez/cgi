@@ -2,6 +2,8 @@
 permalink: /cgi/bash/index.sh
 ---
 
+echo "Content-type: text/plain"
+echo
 echo "Hello from bash!"
 echo
 echo 'date'

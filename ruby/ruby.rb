@@ -2,6 +2,8 @@
 permalink: /cgi/ruby/index.rb
 ---
 
+puts('Content-type: text/plain')
+puts
 puts('Hello from Ruby!')
 puts
 puts('puts(Time.now.strftime("%d/%m/%Y %H:%M"))')
