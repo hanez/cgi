@@ -8,6 +8,6 @@ session_set_cookie_params({{ site.lifetime }});
 
 date_default_timezone_set("{{ site.timezone }}");
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 echo('OK');
 

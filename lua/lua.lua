@@ -2,7 +2,7 @@
 permalink: /cgi/lua/index.lua
 ---
 
-print("Content-type: text/plain")
+print("Content-type: text/plain; charset=utf-8")
 print()
 print("Hello from Lua!")
 print()

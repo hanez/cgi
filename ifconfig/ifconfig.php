@@ -13,6 +13,6 @@ if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
   $ip = $_SERVER['REMOTE_ADDR'];
 }
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 echo($ip);
 ?>

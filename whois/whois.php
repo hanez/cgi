@@ -24,6 +24,6 @@ $cmd = 'whois ' . $host;
 
 $whois = shell_exec($cmd);
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 echo($whois);
 ?>

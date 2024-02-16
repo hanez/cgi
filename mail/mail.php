@@ -37,7 +37,7 @@ if ($_POST["sum"] == $sum) {
   unset($_SESSION["two"]);
 }
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 if ($error=="") {
   echo("{{ site.mail_thank_you }}");
 } else {

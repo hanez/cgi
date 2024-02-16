@@ -4,7 +4,7 @@ permalink: /cgi/php/index.php
 
 <?php
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 
 echo('Hello from PHP!');
 echo("\n\n");

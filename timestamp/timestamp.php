@@ -14,6 +14,6 @@ $milliseconds = floor(microtime(true) * 1000);
 
 #echo($timestamp . "_" . time() . "_" . $milliseconds);
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 echo($timestamp . '.' . microtime(true));
 ?>

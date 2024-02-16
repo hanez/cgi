@@ -22,6 +22,6 @@ $_SESSION["two"] = rand(0, 9);
 
 $challenge = $_SESSION["one"] . " + " . $_SESSION["two"];
 
-header('Content-Type: text/plain');
+header('Content-Type: text/plain; charset=utf-8');
 echo($challenge);
 ?>

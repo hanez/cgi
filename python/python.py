@@ -6,7 +6,7 @@ from datetime import datetime
 #from http import HTTPStatus
 #from pprint import pprint
 
-print("Content-type: text/plain\n")
+print("Content-type: text/plain; charset=utf-8\n")
 #print(HTTPStatus.OK.value)
 print("Hello from Python!")
 print("")
