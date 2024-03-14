@@ -10,6 +10,8 @@ require('xw3.session')
 A multiline comment...
 --]=====]
 
+print('Cache-control: no-cache')
+print('Pragma: no-cache')
 print('Content-type: text/plain; charset=utf-8')
 print()
 
