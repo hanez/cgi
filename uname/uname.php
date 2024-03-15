@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/uname/
+permalink: /cgi/uname/obsolete.php
 ---
 
 <?php

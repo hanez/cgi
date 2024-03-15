@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/uptime/
+permalink: /cgi/uptime/obsolete.php
 ---
 
 <?php
