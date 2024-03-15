@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/timestamp/
+permalink: /cgi/timestamp/obsolete.php
 ---
 
 <?php
