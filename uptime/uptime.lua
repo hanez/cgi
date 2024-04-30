@@ -19,5 +19,5 @@ io.write("Content-Type: text/plain; charset=utf-8\r\n\r\n")
 
 -- Output the result
 --io.write('Server ' .. version:sub(1, -2) .. ': ' .. uptime)
-io.write('Server uptime: ' .. uptime)
+io.write(uptime)
 
