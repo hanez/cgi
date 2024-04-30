@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/uname/index.lua
+permalink: /cgi/linux/index.lua
 ---
 
 -- Function to execute shell commands
@@ -23,5 +23,5 @@ local res = string.sub(uname, 1, pos - 1)
 io.write("Content-Type: text/plain; charset=utf-8\r\n\r\n")
 
 -- Output the result
-io.write(res)
+io.write(res:sub(7, 12))
 
