@@ -13,5 +13,4 @@ print(os.date("%a %b %d %H:%M:%S %Z %Y"))
 print()
 print("for i = 1,10 do print(i) end")
 for i = 1,10 do print(i) end
-print()
-print(os.execute('/usr/bin/env | /usr/bin/sort'))
+
