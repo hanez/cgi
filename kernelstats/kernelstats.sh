@@ -2,14 +2,16 @@
 permalink: /cgi/kernelstats/index.sh
 ---
 
-R_6_9=1
-R_6_8=10
-R_6_6=31
-R_6_1=91
-R_5_15=159
-R_5_10=217
-R_5_4=276
-R_4_19=314
+# These vars are set in _config.yml of the Jekyll project.
+# Details: https://git.xw3.org/xw3/xw3.org/src/branch/main/_config.yml
+R_6_9={{ site.r_6_9 }}
+R_6_8={{ site.r_6_8 }}
+R_6_6={{ site.r_6_6 }}
+R_6_1={{ site.r_6_1 }}
+R_5_15={{ site.r_5_15 }}
+R_5_10={{ site.r_5_10 }}
+R_5_4={{ site.r_5_4 }}
+R_4_19={{ site.r_4_19 }}
 
 # 6.9. series
 for REALAESE in `seq 1 ${R_6_9}`; do
