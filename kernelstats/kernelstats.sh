@@ -80,20 +80,29 @@ done
 echo "Content-type: text/plain; charset=utf-8"
 echo ""
 
-for VERSION in "6.9.${R_6_9}" "6.8.${R_6_8}" "6.6.${R_6_6}" "6.1.${R_6_1}" "5.15.${R_5_15}" "5.10.${R_5_10}" "5.4.${R_5_4}" "4.19.${R_4_19}" ; do
+for VERSION in "6.9.${R_6_9}" "6.8.${R_6_8}" "6.6.${R_6_6}" "6.1.${R_6_1}" "5.15.${R_5_15}" "5.10.${R_5_10}" "5.4.${R_5_4}" "4.19.${R_4_19}"; do
     echo "<h2>Sum of all contributions from release $(echo ${VERSION} | cut -d "." -f1).$(echo ${VERSION} | cut -d "." -f2).1 to ${VERSION}</h2>"
     echo ""
     echo "<pre>"
-    cat {{ site.data_dir  }}kernelstats/ChangeLog-$(echo ${VERSION} | cut -d "." -f1).$(echo ${VERSION} | cut -d "." -f2).* | \
+    cat {{ site.data_dir }}kernelstats/ChangeLog-$(echo ${VERSION} | cut -d "." -f1).$(echo ${VERSION} | cut -d "." -f2).* | \
+    # grep for all lines including the string "Author".
     grep 'Author' | \
+    # Get the second field after the ":" delimiter.
     cut -d':' -f2 | \
+    # Sort all lines.
     sort | \
+    # Get uniq lines and prefix the count.
     uniq -c | \
+    # Remove leading whitespaces and tabs.
     sed 's/^[ \t]*//' | \
+    # Numerically sort the lines.
     sort -nr | \
+    # Get the top 50 lines.
     head -n 50 | \
-    sed 's@<@\&lt;@g' | \
-    sed 's@>@\&gt;@g'
+    # Replace "<" with "$lt;".
+    sed 's/</\&lt;/g' | \
+    # Replace ">" with "$gt;".
+    sed 's/>/\&gt;/g'
     echo "</pre>"
     echo ""
 done

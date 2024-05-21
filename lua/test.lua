@@ -2,7 +2,7 @@
 permalink: /cgi/lua/test.lua
 ---
 
-package.path = '{{ site.libdir }}/lua/?.lua;' .. package.path
+package.path = '{{ site.libdir }}/lua/?.lua;'..package.path
 
 require('xw3.http')
 
@@ -25,7 +25,7 @@ print(os.execute('/usr/bin/env | /usr/bin/sort'))
 print()
 --print(debug.traceback("Stack trace"))
 --print(debug.getinfo(1))
-print('HTTP_COOKIE:')
+print('HTTP_COOKIES:')
 print(os.getenv("HTTP_COOKIE"))
 print()
 
@@ -36,5 +36,4 @@ local cookies = parse_cookies(input)
 for k, v in pairs(cookies) do
     print(k, v)
 end
-
 
