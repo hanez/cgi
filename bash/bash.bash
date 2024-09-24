@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/bash/index.sh
+permalink: /cgi/bash/index.bash
 ---
 
 echo "Content-type: text/plain; charset=utf-8"

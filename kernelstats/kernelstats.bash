@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/kernelstats/index.sh
+permalink: /cgi/kernelstats/index.bash
 ---
 
 # These vars are set in _config.yml of the Jekyll project.

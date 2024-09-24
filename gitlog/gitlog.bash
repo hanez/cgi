@@ -1,5 +1,5 @@
 ---
-permalink: /cgi/gitlog/index.sh
+permalink: /cgi/gitlog/index.bash
 ---
 
 echo "Content-type: text/html; charset=utf-8"
