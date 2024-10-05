@@ -4,6 +4,7 @@ permalink: /cgi/kernelstats/index.bash
 
 # These vars are set in _config.yml of the Jekyll project.
 # Details: https://git.xw3.org/xw3/xw3/src/branch/main/_config.yml
+R_6_11={{ site.r_6_11 }}
 R_6_10={{ site.r_6_10 }}
 R_6_9={{ site.r_6_9 }}
 R_6_8={{ site.r_6_8 }}
@@ -13,6 +14,14 @@ R_5_15={{ site.r_5_15 }}
 R_5_10={{ site.r_5_10 }}
 R_5_4={{ site.r_5_4 }}
 R_4_19={{ site.r_4_19 }}
+
+# 6.11. series
+for REALAESE in `seq 1 ${R_6_11}`; do
+    if [ ! -f "{{ site.data_dir }}kernelstats/ChangeLog-6.11.${REALAESE}" ]; then
+        wget -O "{{ site.data_dir }}kernelstats/ChangeLog-6.11.${REALAESE}" \
+        "https://cdn.kernel.org/pub/linux/kernel/v6.x/ChangeLog-6.11.${REALAESE}"
+    fi
+done
 
 # 6.10. series
 for REALAESE in `seq 1 ${R_6_10}`; do
@@ -89,7 +98,7 @@ done
 echo "Content-type: text/plain; charset=utf-8"
 echo ""
 
-for VERSION in "6.10.${R_6_10}" "6.9.${R_6_9}" "6.8.${R_6_8}" "6.6.${R_6_6}" "6.1.${R_6_1}" "5.15.${R_5_15}" "5.10.${R_5_10}" "5.4.${R_5_4}" "4.19.${R_4_19}"; do
+for VERSION in "6.11.${R_6_11}" "6.10.${R_6_10}" "6.9.${R_6_9}" "6.8.${R_6_8}" "6.6.${R_6_6}" "6.1.${R_6_1}" "5.15.${R_5_15}" "5.10.${R_5_10}" "5.4.${R_5_4}" "4.19.${R_4_19}"; do
     echo "<h2>Sum of all contributions from release $(echo ${VERSION} | cut -d "." -f1).$(echo ${VERSION} | cut -d "." -f2).1 to ${VERSION}</h2>"
     echo ""
     echo "<pre>"
